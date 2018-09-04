@@ -1,0 +1,146 @@
+
+html 
+{
+	box-sizing:border-box;
+	background:#ffc600;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:20px;
+	font-weight:200;
+}
+
+body
+{
+	margin: 0px;
+	background-color: transparent;
+}
+
+*, *:before, *:after 
+{
+	box-sizing:inherit;
+}
+
+section
+{
+	float:left;
+	width:100%;
+}
+
+/**************** Header ****************/
+
+header
+{
+	float:left;
+	width:100%;
+}
+
+.panels {
+	min-height: 100vh;
+	overflow:hidden;
+	display: flex;
+}
+
+.panel {
+	background:#6B0F9c;
+	box-shadow:inset 0 0 0 5px rgba(255,255,255,0.1);
+	color:#FFF;
+	text-align:center;
+	align-items: center;
+	/* Safari transitioned event.propertyName --- flex */
+	/* chrome + FF transitioned event.propertyName === flex-grow */
+	transition:
+		font-size 0.7s cubic-bezier(0.61,-0.19,0.7,-0.11),
+		flex 0.7s cubic-bezier(0.61,-0.19,0.7,-0.11),
+		background 0.2s;
+	font-size: 20px;
+	background-size:cover;
+	background-position:center;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+	display:flex;
+	flex-direction: column;
+}
+
+.penel1 {
+	background-image: url(../images/photo-1446704477871-62a4972035cd%20(1).jpg);
+}
+
+.panel2 {
+	background-image: url(../images/photo-1475446518042-d24970661fec.jpg);
+}
+
+.panel3 {
+	background-image: url(../images/photo-1465188162913-8fb5709d6d57.jpg);
+}
+
+.panel4 {
+	background-image: url(../images/photo-1442522772768-9032b6d10e3e.jpg);
+}
+
+.panel5 {
+	background-image: url(../images/photo-1446704477871-62a4972035cd.jpg);
+}
+
+/* Flex children */
+
+.panel > * {
+	margin: 0;
+	width: 100%;
+	transition: transform 0.5s;
+	flex: 1 0 auto;
+	justify-content: center;
+	align-items: center;
+	display:flex;
+}
+
+.panel > *:first-child {
+	transform: translateY(-100%);
+}
+
+.panel.open-active > *:first-child {
+	transform: translateY(0);
+}
+
+.panel > *:last-child {
+	transform: translateY(100%);
+}
+
+.panel.open-active > *:last-child {
+	transform: translateY(0);
+}
+
+.panel p {
+	text-transform:uppercase;
+	font-family:"Comic Sans MS", cursive;
+	text-shadow: 0 0 4px rgba(0,0,0,0.72), 0 0 14px rgba(0,0,0,0.45);
+	font-size: 2em;
+}
+
+.panel p:nth-child(2) {
+	font-size:4em;
+}
+
+.panel.open {
+	flex:5;
+	font-size: 40px;
+}
+
+.cta {
+	color: #FFF;
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
